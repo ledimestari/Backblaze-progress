@@ -85,11 +85,13 @@ sleep 60
 output_file="bb_percentage.txt"
 
 if [ "$selected_MB" -ne 0 ]; then
-  # Calculate percentage
-  percentage=$(echo "scale=2; 100 - ($remaining_MB / $selected_MB) * 100" | bc)
-  # Save to a text file
-  echo "$percentage" > "$output_file"
-  echo "Percentage saved to $output_file"
+  # Calculate progress using bc with higher precision
+  progress=$(echo "scale=4; (($selected_MB - $remaining_MB) / $selected_MB) * 100" | bc)
+  # Use printf to format the result to exactly 2 decimal places
+  progress=$(printf "%.2f" "$progress")
+  # Save the progress to a text file
+  echo "$progress" > "$output_file"
+  echo "Progress saved to $output_file"
 else
   echo "Error: selected_MB cannot be zero." > "$output_file"
   echo "Error: selected_MB cannot be zero."
