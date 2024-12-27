@@ -79,8 +79,6 @@ curl --request POST \
   --header "Accept: application/json" \
   --data-binary "backblaze,sensor_id=backblaze_ui selected_files=$selected_files,selected_MB=$selected_MB,remaining_files=$remaining_files,remaining_MB=$remaining_MB $timestamp"
 
-sleep 60
-
 # An optional extra step to save the progress percentage into a text file, to be easily parsed for some other use
 output_file="bb_percentage.txt"
 
@@ -96,5 +94,8 @@ else
   echo "Error: selected_MB cannot be zero." > "$output_file"
   echo "Error: selected_MB cannot be zero."
 fi
+# End of the optional part
+
+sleep 60
 
 done
