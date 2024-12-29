@@ -1,5 +1,7 @@
 # Backblaze-progress
 
+A backblaze grafana display.
+
 ![Screenshot 2024-12-26 235835](https://github.com/user-attachments/assets/e90aa52a-9a95-4c7e-850a-0831a7da1208)
 
 This is my script and a related grafana dashboard to post statistics about progress of the backblaze backup to a influxDB database, then to be displayed with grafana.
