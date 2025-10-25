@@ -10,13 +10,13 @@ As Backblaze personal computer backup is a software made for windows and this is
 
 (Bb personal computer backup is also available for Macs but I have no experience with those, this might work on a Mac too but I don't know that.)
 
-Elements in attached grafana json fetch data from an influxDB bucket named "Backblaze", if you use a bucket with a similar name, you shouldn't need to modify all the elements on the dashboard.
+Elements in attached grafana json fetch data from an influxDB bucket named "Backblaze", if you use a bucket with a matchin name, you shouldn't need to modify all the elements on the dashboard.
 
 At the end of the script is an optional extra step to save the progress into a bb_percentage.txt text file.
 This file can then be used for some other application if you want to do so.
 You can comment out or remove the part marked with comments.
 
-Below the graphs seen above are also graphs for each individual drive.
+On the grafana dash, below the graphs seen above are also graphs displaying each individual drive.
 
 ![Screenshot 2024-12-27 000225](https://github.com/user-attachments/assets/d738dda0-7c38-49d3-94cb-44d2dbf6db24)
 
@@ -24,7 +24,7 @@ Below the graphs seen above are also graphs for each individual drive.
 
 This setup is not about influxDB or Grafana. I assume you have those already setup with influxDB Bucket named "Backblaze".
 
-clone the repository and install dependencies.
+First clone the repository, install dependencies and chmod the script.
 
 ```bash
 sudo apt update
