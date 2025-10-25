@@ -24,6 +24,8 @@ On the grafana dash, below the graphs seen above are also graphs displaying each
 
 This setup is not about influxDB or Grafana. I assume you have those already setup with influxDB Bucket named "Backblaze".
 
+This is made using influxDB v2.
+
 First clone the repository, install dependencies and chmod the script.
 
 ```bash
